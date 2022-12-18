@@ -1,0 +1,5 @@
+sudo apt-get install redis
+sudo service redis-server restart
+redis-cli ping
+celery -A proj_name worker -l debug
+celery -A proj_name beat
