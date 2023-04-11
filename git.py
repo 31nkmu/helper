@@ -1,4 +1,9 @@
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+ssh-keygen -o
+git config --global user.name "username"
+git config --global user.email "email"
+
 cd ~/.ssh/
 cat id_rsa.pub
 copy ssh_key
