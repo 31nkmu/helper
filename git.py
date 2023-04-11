@@ -3,6 +3,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ssh-keygen -o
 git config --global user.name "username"
 git config --global user.email "email"
+git config --global init.defaultBranch main
 
 cd ~/.ssh/
 cat id_rsa.pub
