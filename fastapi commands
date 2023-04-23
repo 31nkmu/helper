@@ -1,0 +1,16 @@
+uvicorn <modul_name>:<app_name> --reload
+alembic init migrations
+    create .env
+    create config
+              from dotenv import load_dotenv
+              load_dotenv()
+              DB_HOST = os.environ.get('DB_HOST')
+    alelmbic.ini
+              sqlalchemy.url = postgresql://%(DB_USER)s:%(DB_PASSWORD)s@%(DB_HOST)s:%(DB_PORT)s/%(DB_NAME)s
+    env.py
+              section = config.config_ini_section
+              config.set_section_option(section, 'DB_HOST', DB_HOST)
+
+              target_metadata = metadata
+alembic revision --autogenerate -m 'database creation'
+alembic update <version>
