@@ -8,9 +8,14 @@ alembic init migrations
     alelmbic.ini
               sqlalchemy.url = postgresql://%(DB_USER)s:%(DB_PASSWORD)s@%(DB_HOST)s:%(DB_PORT)s/%(DB_NAME)s
     env.py
+              sys.path.append(os.path.join(sys.path[0], 'src'))
+
               section = config.config_ini_section
               config.set_section_option(section, 'DB_HOST', DB_HOST)
 
               target_metadata = metadata
 alembic revision --autogenerate -m 'database creation'
 alembic update <version>
+
+query - select
+stmt - delete, update, post
