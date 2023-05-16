@@ -1,4 +1,6 @@
 poetry new <project_name>
+poetry init
+poetry install
 poetry env use python3.10
 poetry add 
 poetry show --tree
