@@ -2,4 +2,7 @@ sudo apt-get install redis
 sudo service redis-server restart
 redis-cli ping
 celery -A proj_name worker -l debug
+	celery -A src.celery:app worker --loglevel=INFO --pool=solo
 celery -A proj_name beat
+celery -A src.celery:app flower
+
