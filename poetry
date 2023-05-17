@@ -5,3 +5,4 @@ poetry env use python3.10
 poetry add 
 poetry show --tree
 xargs -n 1 poetry add < requirements.txt 
+which python
