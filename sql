@@ -97,3 +97,8 @@ select product.name from product union select category.name from category;
 timestamp
 select row(level) from name_table
 
+Экспорт
+pg_dump -U <username> -d 'dbname' > 'file.sql'
+
+psql -U <username> -d <db_name'
+
