@@ -100,5 +100,6 @@ select row(level) from name_table
 Экспорт
 pg_dump -U <username> -d 'dbname' > 'file.sql'
 
-psql -U <username> -d <db_name'
+Импорт
+psql <db_name> < <file_name>
 
