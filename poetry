@@ -6,3 +6,4 @@ poetry add
 poetry show --tree
 xargs -n 1 poetry add < requirements.txt 
 which python
+poetry config virtualenvs.in-project true  -  чтобы окружение создалось в проекте
