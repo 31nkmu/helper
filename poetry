@@ -7,3 +7,5 @@ poetry show --tree
 xargs -n 1 poetry add < requirements.txt 
 which python
 poetry config virtualenvs.in-project true  -  чтобы окружение создалось в проекте
+poetry run python3 app/manage.py shell -c "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser(username='admin', password='1')"
+
