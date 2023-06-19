@@ -1,5 +1,7 @@
 sudo -i -u postgres
 psql postgres  (mak)
+ALTER ROLE "asunotest" WITH LOGIN;
+
 
 commands:
 \du
