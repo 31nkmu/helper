@@ -3,3 +3,9 @@
       pass
 3) settings.py
     'ATOMIC_REQUESTS': True   # создает транзакцию на любую view даже там где она не нужна
+
+begin;
+<command>;
+savepoint <point_name>;
+rollback to savepoint <point_name>;
+commit;
