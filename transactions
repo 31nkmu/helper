@@ -1,0 +1,5 @@
+1) @transaction.atomic
+2) with transaction.atomic:
+      pass
+3) settings.py
+    'ATOMIC_REQUESTS': True   # создает транзакцию на любую view даже там где она не нужна
