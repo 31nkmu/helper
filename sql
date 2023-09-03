@@ -2,6 +2,9 @@ sudo -i -u postgres
 psql postgres  (mak)
 ALTER ROLE "asunotest" WITH LOGIN;
 
+----- MySql
+sudo mysql -u billal -p
+
 
 commands:
 \du
