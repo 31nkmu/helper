@@ -1,6 +1,9 @@
-Model.objects.all().values('column1', 'column2') -> QuerySet[{column1: val1}, {column2: val2}...]
-Model.objects.all().values_list('column1', 'column2') -> QuerySet[(column1, val1), (column2, val2)...]
+Model.objects.all().values('column1', 'column2') -> QuerySet[{column1: val1, column2: vala},
+                                                             {column1: val2, column2: valb},...]
+Model.objects.all().values_list('column1', 'column2') -> QuerySet[(val1, vala), (val2, valb)...]
 Model.objects.all().values_list('column1', flat=True) -> QuerySet[val1, val2, val3 ...]
 Model.objects.filter().count() -> int
 Model.objects.filter().exists() -> bool
 Model.objects.all().select_related('product').values('product__list')  
+Model.objects.filter(Q(column1 == val1) | Q(column2 == val2))    позваоляет выполнить несолькло условий   | - или, & - и, ~Q - не      
+Model.objects.filter(field1__gt=F('field2'))   позволяет использовать данные из field2 без их извлечения
