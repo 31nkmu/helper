@@ -1,3 +1,4 @@
 docker exec -it <cont_id> bash
 docker-compose exec web bash
 docker compose -f docker-compose-dev.yaml up --build -d
+docker cp <container_id>:/путь/к/файлу/внутри/контейнера /путь/к/целевой/директории/на/вашей/системе
