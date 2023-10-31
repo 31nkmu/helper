@@ -1,0 +1,3 @@
+docker exec -it <cont_id> bash
+docker-compose exec web bash
+docker compose -f docker-compose-dev.yaml up --build -d
