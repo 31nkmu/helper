@@ -1,6 +1,8 @@
 sudo -i -u postgres
 psql postgres  (mak)
 ALTER ROLE "asunotest" WITH LOGIN;
+psql -U ваше_имя_пользователя -d ваша_база_данных -a -f ваш_файл.sql
+
 
 ----- MySql
 sudo mysql -u billal -p
