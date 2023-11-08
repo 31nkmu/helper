@@ -2,3 +2,7 @@ sudo apt update
 sudo apt install apacheds
 sudo systemctl start apacheds
 sudo apt install ldap-utils
+
+fuser 10389/tcp
+10389/tcp:           18626
+sudo kill -9 18626
