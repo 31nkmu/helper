@@ -1,3 +1,4 @@
 openvpn3 session-start --config profile-499.ovpn
 drhouse
 gmail_pass
+openvpn3 session-manage --session-path /net/openvpn/v3/sessions/be8c9d2csaf02s4ee4s93d5s444bd905f2d9 --disconnect
