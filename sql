@@ -110,3 +110,5 @@ pg_dump -U <username> -d 'dbname' > 'file.sql'
 Импорт
 psql <db_name> < <file_name>
 
+Бэкап из docker контейнера
+docker exec -t cont_id pg_dumpall -c -U db_user > backup.sql
