@@ -105,10 +105,13 @@ timestamp
 select row(level) from name_table
 
 Экспорт
-pg_dump -U <username> -d 'dbname' > 'file.sql'
+	pg_dump -U <username> -d 'dbname' > 'file.sql'
 
 Импорт
-psql <db_name> < <file_name>
+	psql <db_name> < <file_name>
 
 Бэкап из docker контейнера
-docker exec -t cont_id pg_dumpall -c -U db_user > backup.sql
+	docker exec -t cont_id pg_dumpall -c -U db_user > backup.sql
+
+Удаление базы данных из docker контейнера 
+	docker exec -it bc971f53dc9b dropdb -U db_user db_name
