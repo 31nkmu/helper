@@ -12,17 +12,9 @@ copy ssh_key
 github -> settings -> ssh keys 
 paste ssh_key
 
-git init
-git remote add origin
-git add .
-git commit -m 'comment'
-git status
-git push origin master
-git pull
-git branch
-git checkout
 git branch -d
 git reset --hard
-git clone
-git log
 
+
+delete file from all commits
+  git filter-branch --tree-filter 'rm -f path/to/your/file' -- --all
