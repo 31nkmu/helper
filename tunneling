@@ -1,2 +1,4 @@
 ssh -L 5433:db_server_ip:5432 drhouse@server_ip
 psql -h localhost -p 5433 -U trx_service -d totum
+
+netstat -tuln | grep ":8344"  # Проверка порта на открытость
